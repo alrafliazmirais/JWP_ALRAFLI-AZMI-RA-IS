@@ -1,0 +1,108 @@
+/* Layout dasar */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Navbar */
+nav {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.75em 2em;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Konten utama */
+main {
+  max-width: 600px;
+  margin: 2em auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5em;
+  border-radius: 8px;
+}
+
+/* Form */
+form.form-create,
+form.form-edit {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+form input[type='text'] {
+  flex: 1;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+form button {
+  padding: 0.5em 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Daftar tugas */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.task-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task-item.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+.checkbox-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex: 1;
+  margin: 0;
+}
+.actions a {
+  margin-left: 0.5em;
+  text-decoration: none;
+  color: #007bff;
+}
+.actions a.delete {
+  color: red;
+}
